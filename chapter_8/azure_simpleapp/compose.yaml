@@ -1,0 +1,12 @@
+services:
+  python-app:
+    build:
+      context: .
+    container_name: python-app
+    restart: unless-stopped
+    init: true
+    # env_file: ./.env  # Uncomment if .env file exists
+    ports:
+      - "5000:5000"  # Exposed by Dockerfile
+    # No external dependencies detected from provided files
+    # No volumes needed as there are no databases or persistent data services

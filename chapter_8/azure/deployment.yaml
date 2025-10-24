@@ -1,0 +1,10 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: declberta-deployment
+endpoint_name: declberta-endpoint
+model: azureml:declBERTa:1
+code_configuration:
+  code: .
+  scoring_script: mainscoring.py
+environment: azureml:huggingface-environment:1
+instance_type: Standard_DS2_v2
+instance_count: 1
